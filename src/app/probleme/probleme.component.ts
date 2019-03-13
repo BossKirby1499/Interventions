@@ -8,13 +8,16 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 })
 export class ProblemeComponent implements OnInit {
   problemeForm: FormGroup;
-
+  problemeForm2: FormGroup;
   constructor(private fb : FormBuilder) { }
 
   ngOnInit() {
     this.problemeForm = this.fb.group({
-      Prenom: ['',[Validators.minLength(3)]]
+      Prenom: ['',[Validators.minLength(3),Validators.required]]
+
     });
+    
+
   }
 
 }
